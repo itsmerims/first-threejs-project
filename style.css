@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background: rgb(100 0 0 / 0.15) !important; */
+}
+
+body, html {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  color: white;
+  z-index: 2;
+  position: relative;
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav ul {
+  color: white;
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+}
+
+.title {
+  color: white;
+  z-index: 2;
+  position: absolute;
+  font-size: 2rem;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, -80%);
+}
+
+.spin {
+  visibility: hidden;
+  opacity: 0;
+  width: 22vw;
+  position: absolute;
+  z-index: 2;
+  left: 350px;
+  top: 100px;
+  transition: 1s ease 100ms;
+}
+
+.spinright {
+  visibility: hidden;
+  opacity: 0;
+  width: 22vw;
+  position: absolute;
+  z-index: 2;
+  right: 350px;
+  top: 100px;
+  transition: 1s ease 100ms;
+}
+
+.hover {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 40%;
+  height: 90%;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.hoverright {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 40%;
+  height: 90%;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.hover:hover + .spin {
+  visibility: visible;
+  opacity: 1;
+}
+
+.hoverright:hover + .spinright {
+  visibility: visible;
+  opacity: 1;
+}
