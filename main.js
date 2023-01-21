@@ -34,12 +34,12 @@ scene.add(light, ambient)
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load('space.jpg');
+const spaceTexture = new THREE.TextureLoader().load('/space.jpg');
 scene.background = spaceTexture;
 
 // earth
-const earthTexture = new THREE.TextureLoader().load('earth.jpg');
-const earthnormal = new THREE.TextureLoader().load('earthnormal.jpg')
+const earthTexture = new THREE.TextureLoader().load('/earth.jpg');
+const earthnormal = new THREE.TextureLoader().load('/earthnormal.jpg')
 
 const earth = new THREE.Mesh(
   new THREE.SphereGeometry(3, 64, 64),
